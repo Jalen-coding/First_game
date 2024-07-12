@@ -61,7 +61,7 @@ class Player:
         self.x = x
         self.y = y
         self.score = 0
-        self.player_img = pg.image.load("/home/judi/Documents/programming/waves/assets/characters/robot.png")
+        self.player_img = pg.image.load("robot.png")
         self.hitbox = (self.x+3, self.y, 25, 32)
         self.health = health
         self.speed = 2
@@ -76,7 +76,7 @@ class Player:
 
 # Cursor
 pg.mouse.set_visible(False)
-cursor_img = pg.image.load("/home/judi/Documents/programming/waves/assets/objects/rectacle.png")
+cursor_img = pg.image.load("rectacle.png")
 cursor_img_rect = cursor_img.get_rect()
 
 # Bullet variables
@@ -87,7 +87,7 @@ bullets = []
 class Bullets:
     def __init__(self, x, y, bullet_speed):
         self.pos = (x, y)
-        self.bullet_img = pg.image.load("/home/judi/Documents/programming/waves/assets/objects/energy_orb.png")
+        self.bullet_img = pg.image.load("energy_orb.png")
         mx, my = pg.mouse.get_pos()
         self.dir = (mx-x-18, my-y-18)
         self.radius = 5
@@ -122,7 +122,7 @@ class Aliens:
     def __init__(self, x, y,):
         self.x = x
         self.y = y
-        self.image = pg.image.load("/home/judi/Documents/programming/waves/assets/characters/alien.png")
+        self.image = pg.image.load("alien.png")
         self.rect = self.image.get_rect()
         self.speed = 1
         self.hitbox = (self.x+3, self.y, 25, 32)
